@@ -3,6 +3,7 @@ node{
       git 'https://github.com/tapanjella/SampleMvn' 
   }
   stage('Compile-Package'){
-      sh 'mvn package'
+      def mvnHome = tool name: '3.5.4', type: 'maven'
+      sh "${mvnHome}/bin/mvn package"
   }
 }
