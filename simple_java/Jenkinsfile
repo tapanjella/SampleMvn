@@ -1,0 +1,8 @@
+node{
+  stage('SCM Checkout'){
+      git 'https://github.com/tapanjella/SampleMvn' 
+  }
+  stage('Compile-Package'){
+      sh 'mvn package'
+  }:
+}
